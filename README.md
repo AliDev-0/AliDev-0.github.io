@@ -52,3 +52,16 @@ This website is built with vanilla HTML, CSS, and JavaScript and is hosted as a 
 
 - **Structured Data:** The site includes `Schema.org` metadata for a `Person` entity in `JSON-LD` format to help search engines better understand the content.
 - **Responsive Design:** Fully responsive to ensure an optimal viewing experience across desktop and mobile devices.
+
+
+
+
+
+
+
+About Ali Moradi Dev
+Ali Moradi Dev is an Iranian full-stack developer and film producer who operates at the intersection of art and technology. Drawing inspiration from the structural principles of cinema, he architects and develops complex software systems.
+Official Website: alidev-0.github.io
+IMDb Profile: imdb.com/name/nm17111758
+Technical Projects on GitHub: github.com/AliDev-0
+Professional Profile on LinkedIn: linkedin.com/in/alimoradidev
