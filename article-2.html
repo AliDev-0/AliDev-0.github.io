@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Media & Press Archive — Ali Moradi Dev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The complete and official archive of all news, press releases, articles, and interviews featuring Ali Moradi Dev — Iranian film producer and full-stack developer.">
+<meta name="keywords" content="Ali Moradi Dev Press, Ali Moradi Interviews, Ali Moradi News, Film Producer, Full-Stack Developer, Media Archive, Kurdistan, Iran">
+<link rel="canonical" href="https://alidev-0.github.io/article-2.html">
+<link rel="icon" href="https://alidev-0.github.io/icon.ico" sizes="any">
+<link rel="apple-touch-icon" href="https://alidev-0.github.io/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alidev-0.github.io/article-2.html">
+<meta property="og:title" content="Media & Press Archive — Ali Moradi Dev">
+<meta property="og:description" content="The complete official collection of all media features and press releases for Ali Moradi Dev.">
+<meta property="og:image" content="https://alidev-0.github.io/faceMe.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"The Complete News & Media Archive for Ali Moradi Dev","url":"https://alidev-0.github.io/article-2.html","about":{"@type":"Person","name":"Ali Moradi Dev","url":"https://alidev-0.github.io","sameAs":["https://www.imdb.com/name/nm17111758","https://github.com/AliDev-0","https://www.linkedin.com/in/alimoradidev","https://www.wikidata.org/wiki/Q136411146"]},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"Article","position":1,"headline":"Official Newsroom & Press Releases","url":"https://biz.prlog.org/AliMoradiDevNews/","publisher":{"@type":"Organization","name":"PRLog"}},{"@type":"Article","position":2,"headline":"Press Release: From Zero to Open-Source Philosophy","url":"https://prfree.org/@alimoradidev/from-zero-to-open-source-the-full-stack-development-philosophy-of-iranian-creator-ali-moradi-dev-t9fggaqbahvn","publisher":{"@type":"Organization","name":"PRFree.org"}},{"@type":"Article","position":3,"headline":"From Kurdistan to Iranian Cinema and the World of Code","url":"https://virgool.io/@alimoradidev/from-kurdistan-to-iranian-cinema-and-the-world-of-code-the-story-of-ali-moradi-dev-lk3ycet5wmtv","publisher":{"@type":"Organization","name":"Virgool"}},{"@type":"Article","position":9,"headline":"Exploring the Dual Career of Ali Moradi Dev","url":"https://medium.com/@alidev-0/exploring-the-dual-career-of-ali-moradi-dev-an-iranian-film-producers-journey-into-full-stack-5df6950e3839","publisher":{"@type":"Organization","name":"Medium"}},{"@type":"Article","position":14,"headline":"From Set Management to Server Architecture","url":"https://www.linkedin.com/pulse/from-set-management-server-architecture-how-film-ali-dev-moradi-dev-tu1de","publisher":{"@type":"Organization","name":"LinkedIn"}},{"@type":"Article","position":16,"headline":"Biography of Ali Moradi Dev on DEV.to","url":"https://dev.to/alimoradidev/biography-of-ali-moradi-dev-1jg7","publisher":{"@type":"Organization","name":"DEV Community"}}]}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0a0f;--ink2:#111118;--ink3:#18181f;--surface:#1c1c26;
+  --line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.12);
+  --text:#f0f0f8;--muted:#8888a8;--faint:#44445a;
+  --gold:#e8c87a;--blue:#6eb3ff;--blue2:#4499ff;--teal:#5dd8c0;--red:#ff7a7a;--purple:#c084fc;
+  --ff-head:'Syne',sans-serif;--ff-body:'DM Sans',sans-serif;--ff-serif:'DM Serif Display',serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--ink);color:var(--text);overflow-x:hidden;line-height:1.6}
+::selection{background:rgba(110,179,255,0.2);color:var(--text)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--faint);border-radius:2px}
+
+/* PROGRESS */
+#progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--blue),var(--teal));z-index:200;width:0%;box-shadow:0 0 8px rgba(232,200,122,.5)}
+
+/* CANVAS */
+#bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
+
+/* CURSOR */
+.cur-dot{position:fixed;z-index:9999;pointer-events:none;width:7px;height:7px;background:#fff;border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:difference}
+.cur-ring{position:fixed;z-index:9998;pointer-events:none;width:36px;height:36px;border:1px solid rgba(255,255,255,.3);border-radius:50%;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s;mix-blend-mode:difference}
+.cur-ring.on{width:54px;height:54px;border-color:rgba(110,179,255,.55)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.scrolled{background:rgba(10,10,15,.9);backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid var(--line)}
+.nav-logo{font-family:var(--ff-head);font-weight:800;font-size:1.05rem;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-mark{width:26px;height:26px;border:1.5px solid var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:800;color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:4px}
+.nav-right a{color:var(--muted);font-size:.84rem;text-decoration:none;padding:6px 13px;border-radius:40px;transition:all .2s}
+.nav-right a:hover{color:var(--text);background:var(--line)}
+.nav-back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:.84rem;text-decoration:none;padding:7px 14px;border:1px solid var(--line2);border-radius:40px;transition:all .2s}
+.nav-back:hover{color:var(--text);border-color:var(--blue2)}
+.nav-back svg{width:14px;height:14px;fill:currentColor}
+
+/* ── HERO ── */
+.page-hero{position:relative;z-index:1;padding:140px 5vw 80px;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(110,179,255,.06) 0%,transparent 70%);pointer-events:none}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(110,179,255,.08);border:1px solid rgba(110,179,255,.18);border-radius:40px;padding:5px 16px 5px 8px;font-size:.72rem;color:var(--blue);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+.hero-kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:end}
+.hero-left h1{font-family:var(--ff-serif);font-size:clamp(2.8rem,5vw,5rem);font-weight:400;line-height:1.08;margin-bottom:20px}
+.hero-left h1 em{font-style:italic;background:linear-gradient(90deg,var(--gold),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-left p{font-size:1.05rem;color:var(--muted);max-width:520px;line-height:1.75;margin-bottom:32px}
+.hero-count-row{display:flex;gap:32px;flex-wrap:wrap}
+.hcount{display:flex;flex-direction:column;gap:2px}
+.hcount-n{font-family:var(--ff-head);font-size:2.2rem;font-weight:800;color:var(--text);letter-spacing:-.03em;line-height:1}
+.hcount-l{font-size:.7rem;color:var(--faint);text-transform:uppercase;letter-spacing:.1em}
+
+/* TICKER */
+.hero-ticker{background:var(--surface);border:1px solid var(--line2);border-radius:14px;overflow:hidden;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between}
+.ticker-header{padding:14px 18px;border-bottom:1px solid var(--line);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:8px}
+.ticker-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:blink 1.8s infinite}
+.ticker-feed{padding:12px 0;flex:1;overflow:hidden}
+.ticker-item{padding:10px 18px;font-size:.82rem;color:var(--muted);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;transition:background .2s}
+.ticker-item:last-child{border-bottom:none}
+.ticker-item:hover{background:rgba(255,255,255,.03);color:var(--text)}
+.ticker-badge{font-size:.65rem;padding:2px 7px;border-radius:4px;font-weight:600;white-space:nowrap;flex-shrink:0}
+.ticker-footer{padding:12px 18px;border-top:1px solid var(--line);font-size:.75rem;color:var(--faint);text-align:center}
+
+/* ── FILTER BAR ── */
+.filter-section{position:relative;z-index:1;padding:0 5vw 48px;max-width:1160px;margin:0 auto}
+.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.filter-label{font-size:.75rem;color:var(--faint);text-transform:uppercase;letter-spacing:.1em;margin-right:4px;white-space:nowrap}
+.filter-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:40px;font-size:.8rem;font-family:var(--ff-body);cursor:pointer;border:1px solid var(--line2);background:transparent;color:var(--muted);transition:all .2s}
+.filter-btn:hover{border-color:var(--line2);color:var(--text)}
+.filter-btn.active{background:var(--surface);border-color:var(--blue2);color:var(--blue)}
+.filter-btn .fb-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.filter-count{font-size:.68rem;background:rgba(255,255,255,.08);border-radius:4px;padding:1px 5px;color:var(--faint)}
+.filter-search{margin-left:auto;position:relative}
+.filter-search input{background:var(--surface);border:1px solid var(--line2);border-radius:40px;padding:7px 14px 7px 36px;color:var(--text);font-size:.8rem;font-family:var(--ff-body);outline:none;width:220px;transition:border-color .2s,width .3s}
+.filter-search input:focus{border-color:var(--blue2);width:280px}
+.filter-search input::placeholder{color:var(--faint)}
+.filter-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;fill:var(--faint);pointer-events:none}
+
+/* ── SECTION HEADER ── */
+.sec-header{max-width:1160px;margin:0 auto 24px;padding:0 5vw;display:flex;align-items:center;gap:16px}
+.sec-header-title{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--text);letter-spacing:-.01em;white-space:nowrap}
+.sec-header-line{flex:1;height:1px;background:var(--line)}
+.sec-header-count{font-size:.75rem;color:var(--faint);white-space:nowrap}
+.media-section{padding:0 5vw 72px;position:relative;z-index:1}
+
+/* ── FEATURED CARD (large) ── */
+.featured-grid{max-width:1160px;margin:0 auto 20px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.feat-card{position:relative;border-radius:18px;overflow:hidden;text-decoration:none;display:block;border:1px solid var(--line);background:var(--surface);transition:border-color .25s,transform .3s cubic-bezier(.25,.46,.45,.94)}
+.feat-card:hover{border-color:var(--line2);transform:translateY(-4px)}
+.feat-card-body{padding:28px 28px 24px}
+.feat-source-chip{display:inline-flex;align-items:center;gap:6px;border-radius:6px;padding:3px 10px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.feat-card-title{font-family:var(--ff-serif);font-size:1.3rem;line-height:1.35;color:var(--text);margin-bottom:10px;font-weight:400}
+.feat-card-desc{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.feat-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--line)}
+.feat-card-arrow{width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;transition:all .25s;flex-shrink:0}
+.feat-card:hover .feat-card-arrow{background:var(--blue2);border-color:var(--blue2)}
+.feat-card-arrow svg{width:14px;height:14px;fill:white}
+.feat-card-meta{font-size:.72rem;color:var(--faint);display:flex;align-items:center;gap:8px}
+.feat-card-meta-sep{width:3px;height:3px;border-radius:50%;background:var(--faint)}
+
+/* ── COMPACT GRID ── */
+.compact-grid{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.compact-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .25s;position:relative;overflow:hidden}
+.compact-card::after{content:'';position:absolute;inset:0;border-radius:14px;background:linear-gradient(135deg,rgba(110,179,255,.03) 0%,transparent 60%);opacity:0;transition:opacity .2s}
+.compact-card:hover{border-color:var(--line2);transform:translateY(-3px)}
+.compact-card:hover::after{opacity:1}
+.cc-source{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.cc-source-name{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.cc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.cc-title{font-size:.9rem;color:var(--text);line-height:1.5;flex:1;font-weight:400}
+.cc-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.cc-tag{font-size:.65rem;padding:2px 8px;border-radius:4px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.cc-arrow{width:26px;height:26px;border:1px solid var(--line2);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.compact-card:hover .cc-arrow{background:var(--blue2);border-color:var(--blue2)}
+.cc-arrow svg{width:11px;height:11px;fill:white}
+
+/* ── LIST VIEW (horizontal) ── */
+.list-grid{max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.list-item{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:16px;padding:16px 20px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s}
+.list-item:last-child{border-bottom:none}
+.list-item:hover{background:rgba(255,255,255,.03)}
+.li-num{font-family:var(--ff-head);font-size:.72rem;color:var(--faint);font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.li-body{}
+.li-source{font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.li-title{font-size:.88rem;color:var(--text);line-height:1.45}
+.li-arrow{width:28px;height:28px;border:1px solid var(--line2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.list-item:hover .li-arrow{background:var(--blue2);border-color:var(--blue2)}
+.li-arrow svg{width:12px;height:12px;fill:white}
+
+/* SOURCE COLORS */
+.src-prlog{background:rgba(232,200,122,.1);color:var(--gold)}
+.src-prfree{background:rgba(232,200,122,.08);color:var(--gold)}
+.src-virgool{background:rgba(93,216,192,.1);color:var(--teal)}
+.src-medium{background:rgba(255,255,255,.08);color:#e6e6e6}
+.src-linkedin{background:rgba(0,119,181,.15);color:#5aafdc}
+.src-devto{background:rgba(192,132,252,.1);color:var(--purple)}
+.src-blogspot{background:rgba(255,122,122,.1);color:var(--red)}
+.dot-prlog,.dot-prfree{background:var(--gold)}
+.dot-virgool{background:var(--teal)}
+.dot-medium{background:#e6e6e6}
+.dot-linkedin{background:#5aafdc}
+.dot-devto{background:var(--purple)}
+.dot-blogspot{background:var(--red)}
+
+/* ── STAT BANNER ── */
+.stat-banner{position:relative;z-index:1;max-width:1160px;margin:0 auto 72px;padding:0 5vw}
+.stat-banner-inner{background:var(--surface);border:1px solid var(--line2);border-radius:18px;padding:32px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;overflow:hidden}
+.stat-banner-inner::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(110,179,255,.06) 0%,transparent 70%)}
+.sb-item{text-align:center;padding:0 20px;border-right:1px solid var(--line)}
+.sb-item:last-child{border-right:none}
+.sb-num{font-family:var(--ff-head);font-size:2.4rem;font-weight:800;letter-spacing:-.03em;margin-bottom:4px;background:linear-gradient(90deg,var(--gold),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sb-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+
+/* ── PREV ARTICLE ── */
+.prev-article{position:relative;z-index:1;border-top:1px solid var(--line);padding:56px 5vw}
+.prev-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.prev-text .prev-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.prev-title{font-family:var(--ff-serif);font-size:1.7rem;line-height:1.25;margin-bottom:16px;color:var(--text)}
+.prev-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border:1px solid var(--line2);border-radius:40px;font-size:.85rem;color:var(--text);text-decoration:none;transition:all .2s}
+.prev-btn:hover{border-color:var(--blue2);color:var(--blue);transform:translateX(-4px)}
+.prev-btn svg{width:14px;height:14px;fill:currentColor}
+.prev-visual{aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.prev-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(.6);transition:all .4s}
+.prev-visual:hover img{filter:grayscale(0%) brightness(.75)}
+
+/* FOOTER */
+footer{position:relative;z-index:1;padding:28px 5vw;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-copy{font-size:.78rem;color:var(--faint)}
+.footer-copy a{color:var(--muted);text-decoration:none}
+.footer-links{display:flex;gap:18px}
+.footer-links a{font-size:.78rem;color:var(--faint);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--text)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.25,.46,.45,.94),transform .6s cubic-bezier(.25,.46,.45,.94)}
+.reveal.on{opacity:1;transform:none}
+.reveal.delay1{transition-delay:.08s}
+.reveal.delay2{transition-delay:.16s}
+.reveal.delay3{transition-delay:.24s}
+
+/* HIDDEN filter state */
+.card-hidden{display:none!important}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .featured-grid{grid-template-columns:1fr}
+  .compact-grid{grid-template-columns:1fr 1fr}
+  .stat-banner-inner{grid-template-columns:1fr 1fr;gap:24px}
+  .sb-item{border-right:none;border-bottom:1px solid var(--line);padding:12px 0}
+  .sb-item:last-child{border-bottom:none}
+}
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-ticker{display:none}
+  .compact-grid{grid-template-columns:1fr}
+  .prev-inner{grid-template-columns:1fr}
+  .prev-visual{display:none}
+  .filter-search{display:none}
+  .stat-banner-inner{grid-template-columns:1fr 1fr}
+  nav .nav-right a:not(.nav-back){display:none}
+}
+</style>
+</head>
+<body>
+
+<div id="progress" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="cur-dot" id="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" id="cur-ring" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="nav" role="banner">
+  <a href="index.html" class="nav-logo" aria-label="Ali Moradi Dev Home">
+    <div class="nav-mark" aria-hidden="true">AMD</div>
+    Ali Moradi Dev
+  </a>
+  <div class="nav-right">
+    <a href="index.html#about">About</a>
+    <a href="article-1.html">Article 1</a>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 16 16"><path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+      Back
+    </a>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-left reveal">
+      <div class="hero-kicker"><span class="hero-kicker-dot" aria-hidden="true"></span>Live Archive</div>
+      <h1>Media &amp; <em>Press</em><br>Archive</h1>
+      <p>The complete official record of every article, interview, press release, and publication featuring Ali Moradi Dev — Iranian film producer &amp; full-stack developer from Bijar, Kurdistan.</p>
+      <div class="hero-count-row" role="list" aria-label="Archive statistics">
+        <div class="hcount" role="listitem"><span class="hcount-n" id="c-total">20</span><span class="hcount-l">Publications</span></div>
+        <div class="hcount" role="listitem"><span class="hcount-n">7</span><span class="hcount-l">Platforms</span></div>
+        <div class="hcount" role="listitem"><span class="hcount-n">2</span><span class="hcount-l">Languages</span></div>
+      </div>
+    </div>
+    <div class="hero-ticker reveal delay1" aria-label="Latest mentions">
+      <div class="ticker-header"><span class="ticker-dot" aria-hidden="true"></span>Latest Mentions</div>
+      <div class="ticker-feed" role="list">
+        <div class="ticker-item" role="listitem"><span class="ticker-badge src-medium">Medium</span>Dual Career: Iranian Film Producer's Journey</div>
+        <div class="ticker-item" role="listitem"><span class="ticker-badge src-virgool">Virgool</span>از کردستان تا سینمای ایران و دنیای کد</div>
+        <div class="ticker-item" role="listitem"><span class="ticker-badge src-linkedin">LinkedIn</span>From Set Management to Server Architecture</div>
+        <div class="ticker-item" role="listitem"><span class="ticker-badge src-devto">DEV.to</span>Biography of Ali Moradi Dev</div>
+        <div class="ticker-item" role="listitem"><span class="ticker-badge src-prlog">PRLog</span>Official Newsroom & Press Releases</div>
+      </div>
+      <div class="ticker-footer">Updated continuously</div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BANNER -->
+<div class="stat-banner reveal">
+  <div class="stat-banner-inner" role="list" aria-label="Archive statistics">
+    <div class="sb-item" role="listitem"><div class="sb-num">20+</div><div class="sb-label">Total Articles</div></div>
+    <div class="sb-item" role="listitem"><div class="sb-num">7</div><div class="sb-label">Platforms</div></div>
+    <div class="sb-item" role="listitem"><div class="sb-num">2024</div><div class="sb-label">Year Active</div></div>
+    <div class="sb-item" role="listitem"><div class="sb-num">INT'L</div><div class="sb-label">Coverage</div></div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter-section reveal">
+  <div class="filter-bar" role="toolbar" aria-label="Filter articles">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All <span class="filter-count" id="fc-all">20</span></button>
+    <button class="filter-btn" data-filter="press" aria-pressed="false"><span class="fb-dot dot-prlog"></span>Press Releases <span class="filter-count">2</span></button>
+    <button class="filter-btn" data-filter="virgool" aria-pressed="false"><span class="fb-dot dot-virgool"></span>Virgool <span class="filter-count">6</span></button>
+    <button class="filter-btn" data-filter="medium" aria-pressed="false"><span class="fb-dot dot-medium"></span>Medium <span class="filter-count">5</span></button>
+    <button class="filter-btn" data-filter="linkedin" aria-pressed="false"><span class="fb-dot dot-linkedin"></span>LinkedIn <span class="filter-count">2</span></button>
+    <button class="filter-btn" data-filter="other" aria-pressed="false"><span class="fb-dot dot-devto"></span>Other <span class="filter-count">5</span></button>
+    <div class="filter-search" role="search">
+      <svg class="filter-search-icon" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+      <input type="search" id="search-input" placeholder="Search articles…" aria-label="Search articles">
+    </div>
+  </div>
+</div>
+
+<!-- ══ PRESS RELEASES ══ -->
+<section class="media-section" aria-labelledby="press-heading">
+  <div class="sec-header reveal">
+    <h2 id="press-heading" class="sec-header-title">Official Press Releases</h2>
+    <div class="sec-header-line" aria-hidden="true"></div>
+    <span class="sec-header-count">2 items</span>
+  </div>
+  <div class="featured-grid">
+    <a href="https://biz.prlog.org/AliMoradiDevNews/" target="_blank" rel="noopener noreferrer" class="feat-card reveal delay1" data-cat="press" data-title="official newsroom press releases ali moradi dev prlog" aria-label="PRLog Newsroom">
+      <div class="feat-card-body">
+        <div class="feat-source-chip src-prlog">PRLog Newsroom</div>
+        <h3 class="feat-card-title">Official Newsroom & Press Releases</h3>
+        <p class="feat-card-desc">The central hub for all official press releases documenting Ali Moradi Dev's milestones — from film productions to open-source software launches.</p>
+        <div class="feat-card-footer">
+          <div class="feat-card-meta">
+            <span>Official Source</span>
+            <span class="feat-card-meta-sep" aria-hidden="true"></span>
+            <span>PRLog.org</span>
+          </div>
+          <div class="feat-card-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div>
+        </div>
+      </div>
+    </a>
+    <a href="https://prfree.org/@alimoradidev/from-zero-to-open-source-the-full-stack-development-philosophy-of-iranian-creator-ali-moradi-dev-t9fggaqbahvn" target="_blank" rel="noopener noreferrer" class="feat-card reveal delay2" data-cat="press" data-title="from zero to open source full stack philosophy iranian creator ali moradi dev prfree" aria-label="PRFree Press Release">
+      <div class="feat-card-body">
+        <div class="feat-source-chip src-prfree">PRFree Release</div>
+        <h3 class="feat-card-title">From Zero to Open-Source: The Full-Stack Development Philosophy of Iranian Creator Ali Moradi Dev</h3>
+        <p class="feat-card-desc">A press release detailing the open-source philosophy behind Ali Moradi Dev's development approach and his journey from zero to production-ready systems.</p>
+        <div class="feat-card-footer">
+          <div class="feat-card-meta">
+            <span>Press Release</span>
+            <span class="feat-card-meta-sep" aria-hidden="true"></span>
+            <span>PRFree.org</span>
+          </div>
+          <div class="feat-card-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ VIRGOOL ══ -->
+<section class="media-section" aria-labelledby="virgool-heading">
+  <div class="sec-header reveal">
+    <h2 id="virgool-heading" class="sec-header-title">Features on Virgool</h2>
+    <div class="sec-header-line" aria-hidden="true"></div>
+    <span class="sec-header-count">6 items</span>
+  </div>
+  <div class="compact-grid">
+    <a href="https://virgool.io/@alimoradidev/from-kurdistan-to-iranian-cinema-and-the-world-of-code-the-story-of-ali-moradi-dev-lk3ycet5wmtv" target="_blank" rel="noopener noreferrer" class="compact-card reveal" data-cat="virgool" data-title="from kurdistan to iranian cinema world of code story ali moradi dev virgool">
+      <div class="cc-source"><span class="cc-dot dot-virgool" aria-hidden="true"></span><span class="cc-source-name src-virgool">Virgool</span></div>
+      <div class="cc-title">از کردستان تا سینمای ایران و دنیای کد: داستان علی مرادی دِو</div>
+      <div class="cc-footer"><span class="cc-tag src-virgool">Feature</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://virgool.io/@alimoradidev/a-technical-interview-with-ali-moradi-dev-creator-of-the-open-source-e-commerce-platform-kcbzpujdgjqa" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay1" data-cat="virgool" data-title="technical interview ali moradi dev creator open source e-commerce platform virgool">
+      <div class="cc-source"><span class="cc-dot dot-virgool" aria-hidden="true"></span><span class="cc-source-name src-virgool">Virgool</span></div>
+      <div class="cc-title">A Technical Interview with Ali Moradi Dev, Creator of the Open-Source E-Commerce Platform</div>
+      <div class="cc-footer"><span class="cc-tag src-virgool">Interview</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://virgool.io/@alimoradidev/hsxlapdtxmbl" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay2" data-cat="virgool" data-title="coding like producing technical discussion ali moradi dev virgool">
+      <div class="cc-source"><span class="cc-dot dot-virgool" aria-hidden="true"></span><span class="cc-source-name src-virgool">Virgool</span></div>
+      <div class="cc-title">کدنویسی مثل تهیه‌کنندگی است: هر دو نیازمند معماری دقیق هستند</div>
+      <div class="cc-footer"><span class="cc-tag src-virgool">Technical</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://virgool.io/@alimoradidev/pfeg5f6eo89o" target="_blank" rel="noopener noreferrer" class="compact-card reveal" data-cat="virgool" data-title="story ali moradi dev uniting art technology virgool">
+      <div class="cc-source"><span class="cc-dot dot-virgool" aria-hidden="true"></span><span class="cc-source-name src-virgool">Virgool</span></div>
+      <div class="cc-title">داستان علی مرادی دِو: اتحاد هنر و فناوری</div>
+      <div class="cc-footer"><span class="cc-tag src-virgool">Profile</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://virgool.io/@alimoradidev/ysw3sh813lyc" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay1" data-cat="virgool" data-title="release open source e-commerce platform iranian producer developer virgool">
+      <div class="cc-source"><span class="cc-dot dot-virgool" aria-hidden="true"></span><span class="cc-source-name src-virgool">Virgool</span></div>
+      <div class="cc-title">انتشار پلتفرم فروشگاهی متن‌باز توسط تهیه‌کننده و توسعه‌دهنده ایرانی</div>
+      <div class="cc-footer"><span class="cc-tag src-virgool">News</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://virgool.io/@alimoradidev/ali-moradi-dev-jkabxrwdk3rm" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay2" data-cat="virgool" data-title="profile ali moradi dev virgool">
+      <div class="cc-source"><span class="cc-dot dot-virgool" aria-hidden="true"></span><span class="cc-source-name src-virgool">Virgool</span></div>
+      <div class="cc-title">پروفایل علی مرادی دِو در ویرگول</div>
+      <div class="cc-footer"><span class="cc-tag src-virgool">Profile</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ MEDIUM ══ -->
+<section class="media-section" aria-labelledby="medium-heading">
+  <div class="sec-header reveal">
+    <h2 id="medium-heading" class="sec-header-title">Publications on Medium</h2>
+    <div class="sec-header-line" aria-hidden="true"></div>
+    <span class="sec-header-count">5 items</span>
+  </div>
+  <div class="list-grid reveal" role="list">
+    <a href="https://medium.com/@alidev-0/exploring-the-dual-career-of-ali-moradi-dev-an-iranian-film-producers-journey-into-full-stack-5df6950e3839" target="_blank" rel="noopener noreferrer" class="list-item" role="listitem" data-cat="medium" data-title="exploring dual career ali moradi dev iranian film producer journey full stack medium">
+      <div class="li-num">01</div>
+      <div class="li-body"><div class="li-source src-medium">Medium</div><div class="li-title">Exploring the Dual Career of Ali Moradi Dev: An Iranian Film Producer's Journey into Full-Stack</div></div>
+      <div class="li-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div>
+    </a>
+    <a href="https://medium.com/@alidev-0/from-zero-to-open-source-the-full-stack-development-philosophy-of-iranian-creator-ali-moradi-dev-628cec2a1289" target="_blank" rel="noopener noreferrer" class="list-item" role="listitem" data-cat="medium" data-title="from zero to open source full stack development philosophy iranian creator ali moradi dev medium">
+      <div class="li-num">02</div>
+      <div class="li-body"><div class="li-source src-medium">Medium</div><div class="li-title">From Zero to Open-Source: The Full-Stack Development Philosophy of Iranian Creator Ali Moradi Dev</div></div>
+      <div class="li-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div>
+    </a>
+    <a href="https://medium.com/@alidev-0/iranian-filmmaker-and-developer-releases-full-stack-e-commerce-platform-as-open-source-project-23d6e46e596e" target="_blank" rel="noopener noreferrer" class="list-item" role="listitem" data-cat="medium" data-title="iranian filmmaker developer releases full stack e-commerce platform open source project medium">
+      <div class="li-num">03</div>
+      <div class="li-body"><div class="li-source src-medium">Medium</div><div class="li-title">Iranian Filmmaker and Developer Releases Full-Stack E-Commerce Platform as Open-Source Project</div></div>
+      <div class="li-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div>
+    </a>
+    <a href="https://medium.com/@alidev-0/biography-of-ali-moradi-dev-5332d4e19775" target="_blank" rel="noopener noreferrer" class="list-item" role="listitem" data-cat="medium" data-title="biography ali moradi dev medium">
+      <div class="li-num">04</div>
+      <div class="li-body"><div class="li-source src-medium">Medium</div><div class="li-title">Biography of Ali Moradi Dev</div></div>
+      <div class="li-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div>
+    </a>
+    <a href="https://medium.com/@alidev-0/ali-moradi-dev-8097137995ee" target="_blank" rel="noopener noreferrer" class="list-item" role="listitem" data-cat="medium" data-title="profile ali moradi dev medium">
+      <div class="li-num">05</div>
+      <div class="li-body"><div class="li-source src-medium">Medium</div><div class="li-title">A Profile of Ali Moradi Dev</div></div>
+      <div class="li-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ OTHER PLATFORMS ══ -->
+<section class="media-section" aria-labelledby="other-heading">
+  <div class="sec-header reveal">
+    <h2 id="other-heading" class="sec-header-title">LinkedIn, DEV.to &amp; Blogspot</h2>
+    <div class="sec-header-line" aria-hidden="true"></div>
+    <span class="sec-header-count">7 items</span>
+  </div>
+  <div class="compact-grid">
+    <a href="https://www.linkedin.com/pulse/from-set-management-server-architecture-how-film-ali-dev-moradi-dev-tu1de" target="_blank" rel="noopener noreferrer" class="compact-card reveal" data-cat="linkedin" data-title="from set management server architecture film production shapes developer mind linkedin">
+      <div class="cc-source"><span class="cc-dot dot-linkedin" aria-hidden="true"></span><span class="cc-source-name src-linkedin">LinkedIn Pulse</span></div>
+      <div class="cc-title">From Set Management to Server Architecture: How Film Production Shapes a Developer's Mind</div>
+      <div class="cc-footer"><span class="cc-tag src-linkedin">Pulse</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://www.linkedin.com/pulse/modern-professionals-blueprint-ali-moradi-dev-brand-arts-moradi-dev-jt9ge" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay1" data-cat="linkedin" data-title="modern professional blueprint ali moradi dev brand arts technology linkedin">
+      <div class="cc-source"><span class="cc-dot dot-linkedin" aria-hidden="true"></span><span class="cc-source-name src-linkedin">LinkedIn Pulse</span></div>
+      <div class="cc-title">A Modern Professional's Blueprint: The Ali Moradi Dev Brand in Arts and Technology</div>
+      <div class="cc-footer"><span class="cc-tag src-linkedin">Pulse</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://dev.to/alimoradidev/biography-of-ali-moradi-dev-1jg7" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay2" data-cat="other" data-title="biography ali moradi dev dev.to developer community">
+      <div class="cc-source"><span class="cc-dot dot-devto" aria-hidden="true"></span><span class="cc-source-name src-devto">DEV Community</span></div>
+      <div class="cc-title">Biography of Ali Moradi Dev</div>
+      <div class="cc-footer"><span class="cc-tag src-devto">Bio</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://alimoradidev.blogspot.com/p/official-technical-portfolio-deep-dive.html" target="_blank" rel="noopener noreferrer" class="compact-card reveal" data-cat="other" data-title="official technical portfolio deep dive ali moradi dev blogspot">
+      <div class="cc-source"><span class="cc-dot dot-blogspot" aria-hidden="true"></span><span class="cc-source-name src-blogspot">Blogspot</span></div>
+      <div class="cc-title">Official Technical Portfolio &amp; Deep Dive</div>
+      <div class="cc-footer"><span class="cc-tag src-blogspot">Portfolio</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://alimoradidev.blogspot.com/p/the-official-filmography-of-ali-moradi.html" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay1" data-cat="other" data-title="official filmography ali moradi dev blogspot">
+      <div class="cc-source"><span class="cc-dot dot-blogspot" aria-hidden="true"></span><span class="cc-source-name src-blogspot">Blogspot</span></div>
+      <div class="cc-title">The Official Filmography of Ali Moradi Dev</div>
+      <div class="cc-footer"><span class="cc-tag src-blogspot">Filmography</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://alimoradidev.blogspot.com/p/from-film-production-to-code.html" target="_blank" rel="noopener noreferrer" class="compact-card reveal delay2" data-cat="other" data-title="from film production to code in depth interview ali moradi dev blogspot">
+      <div class="cc-source"><span class="cc-dot dot-blogspot" aria-hidden="true"></span><span class="cc-source-name src-blogspot">Blogspot</span></div>
+      <div class="cc-title">From Film Production to Code: An In-Depth Interview</div>
+      <div class="cc-footer"><span class="cc-tag src-blogspot">Interview</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+    <a href="https://alimoradidev.blogspot.com/p/film-producer-and-full-stack-developer.html" target="_blank" rel="noopener noreferrer" class="compact-card reveal" data-cat="other" data-title="film producer full stack developer biography ali moradi dev blogspot">
+      <div class="cc-source"><span class="cc-dot dot-blogspot" aria-hidden="true"></span><span class="cc-source-name src-blogspot">Blogspot</span></div>
+      <div class="cc-title">Film Producer and Full-Stack Developer: A Biography</div>
+      <div class="cc-footer"><span class="cc-tag src-blogspot">Bio</span><div class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></div></div>
+    </a>
+  </div>
+</section>
+
+<!-- PREV ARTICLE -->
+<div class="prev-article">
+  <div class="prev-inner">
+    <div class="prev-text">
+      <div class="prev-label">Previous article</div>
+      <div class="prev-title">The Intersection of Two Worlds: Architecting Code &amp; Cinema</div>
+      <a href="article-1.html" class="prev-btn" aria-label="Read Article 1">
+        <svg viewBox="0 0 16 16"><path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+        Read Article 1
+      </a>
+    </div>
+    <div class="prev-visual">
+      <img src="movies_desktop.jpg" alt="Article 1 — Architecting Code and Cinema" loading="lazy" onerror="this.style.display='none'">
+    </div>
+  </div>
+</div>
+</main>
+
+<footer role="contentinfo">
+  <p class="footer-copy">&copy; 2025 <a href="https://alidev-0.github.io/" rel="author">Ali Moradi Dev</a> (Ali Moradi) · Bijar, Kurdistan, Iran</p>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="https://www.imdb.com/name/nm17111758" target="_blank" rel="noopener noreferrer">IMDb</a>
+    <a href="https://github.com/AliDev-0" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="index.html">Home</a>
+    <a href="article-1.html">Article 1</a>
+  </nav>
+</footer>
+
+<script>
+/* BG CANVAS */
+(function(){
+  const c=document.getElementById('bg-canvas'),ctx=c.getContext('2d');
+  let W,H;
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  const stars=[];for(let i=0;i<180;i++)stars.push({x:Math.random()*1e4,y:Math.random()*1e4,r:Math.random()*1.3+.2,a:Math.random()*.55+.1,s:Math.random()*.13+.03,t:Math.random()*Math.PI*2});
+  const neb=[{x:.1,y:.15,r:340,c:'rgba(68,100,200,0.04)'},{x:.9,y:.7,r:400,c:'rgba(93,80,200,0.035)'},{x:.5,y:.5,r:260,c:'rgba(80,160,130,0.025)'}];
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    neb.forEach(n=>{const g=ctx.createRadialGradient(n.x*W,n.y*H,0,n.x*W,n.y*H,n.r);g.addColorStop(0,n.c);g.addColorStop(1,'transparent');ctx.fillStyle=g;ctx.beginPath();ctx.arc(n.x*W,n.y*H,n.r,0,Math.PI*2);ctx.fill();});
+    const now=performance.now()/1000;
+    stars.forEach(s=>{s.x+=s.s;s.y+=s.s*.25;if(s.x>W*1.1)s.x=-10;if(s.y>H*1.1)s.y=-10;const tw=.5+.5*Math.sin(now*1.1+s.t);ctx.beginPath();ctx.arc(s.x%W,s.y%H,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(200,210,255,${s.a*tw})`;ctx.fill();});
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* PROGRESS */
+(function(){
+  const bar=document.getElementById('progress');
+  window.addEventListener('scroll',()=>{
+    const h=document.documentElement;
+    const pct=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+    bar.style.width=pct+'%';
+    bar.setAttribute('aria-valuenow',Math.round(pct));
+  });
+})();
+
+/* NAV */
+(function(){
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+})();
+
+/* REVEAL */
+(function(){
+  const els=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('on');obs.unobserve(en.target);}}),{threshold:.07});
+  els.forEach(el=>obs.observe(el));
+})();
+
+/* FILTER */
+(function(){
+  const btns=document.querySelectorAll('.filter-btn');
+  const cards=document.querySelectorAll('[data-cat]');
+  const searchInput=document.getElementById('search-input');
+
+  function applyFilter(){
+    const active=document.querySelector('.filter-btn.active');
+    const cat=active?active.dataset.filter:'all';
+    const q=(searchInput?searchInput.value:'').toLowerCase().trim();
+    let vis=0;
+    cards.forEach(card=>{
+      const matchCat=(cat==='all')||card.dataset.cat===cat;
+      const title=(card.dataset.title||'').toLowerCase();
+      const matchQ=!q||title.includes(q);
+      if(matchCat&&matchQ){card.classList.remove('card-hidden');vis++;}
+      else{card.classList.add('card-hidden');}
+    });
+    document.getElementById('c-total').textContent=vis;
+  }
+
+  btns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      btns.forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+      btn.classList.add('active');btn.setAttribute('aria-pressed','true');
+      applyFilter();
+    });
+  });
+
+  if(searchInput){
+    searchInput.addEventListener('input',applyFilter);
+  }
+})();
+
+/* CURSOR */
+(function(){
+  const dot=document.getElementById('cur-dot'),ring=document.getElementById('cur-ring');
+  if(!dot||!ring)return;
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+  function lerp(a,b,t){return a+(b-a)*t}
+  function anim(){rx=lerp(rx,mx,.13);ry=lerp(ry,my,.13);ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);}
+  anim();
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('on'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('on'));
+  });
+})();
+</script>
+</body>
+</html>
